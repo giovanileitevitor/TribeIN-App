@@ -1,97 +1,38 @@
-# Android Studio
-/*/build/
-/*/local.properties
-/*/out
-/*/*/build
-/*/*/production
+# Gradle and Kotlin
+.gradle/
+.kotlin/
+**/build/
+!gradle/wrapper/gradle-wrapper.jar
+local.properties
+
+# Android
 captures/
-.navigation/
-*.ipr
-*~
-*.swp
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+*.ap_
+
+# IDE
+.idea/
 *.iml
-.idea/caches/
-.idea/libraries/
-.idea/shelf/
-.idea/workspace.xml
-.idea/tasks.xml
-.idea/.name
-.idea/compiler.xml
-.idea/copyright/profiles_settings.xml
-.idea/encodings.xml
-.idea/misc.xml
-.idea/modules.xml
-.idea/scopes/scope_settings.xml
-.idea/dictionaries
-.idea/vcs.xml
-.idea/jsLibraryMappings.xml
-.idea/datasources.xml
-.idea/dataSources.ids
-.idea/sqlDataSources.xml
-.idea/dynamic.xml
-.idea/uiDesigner.xml
-.idea/assetWizardSettings.xml
-.idea/gradle.xml
-.idea/jarRepositories.xml
-.idea/navEditor.xml
-!/gradle/wrapper/gradle-wrapper.jar
+*.ipr
+*.iws
 
-### Xcode ###
-*.xcodeproj/*
-!*.xcodeproj/project.pbxproj
-!*.xcodeproj/xcshareddata/
-!*.xcworkspace/contents.xcworkspacedata/
-/*.gcno
-**/xcshareddata/WorkspaceSettings.xcsettings
-*.xcuserstate
-*.xcscheme
-*.xcworkspace
+# macOS
+.DS_Store
+
+# Xcode and iOS
+DerivedData/
 xcuserdata/
-
-# CocoaPods
+*.xcuserstate
+*.ipa
+*.dSYM/
+*.dSYM.zip
+*.xccheckout
+*.xcscmblueprint
 Pods/
 
-## iOS App packaging
-*.ipa
-*.dSYM.zip
-*.dSYM
-
-# Android App packaging
-*.apk
-*.ap_
-*.aab
-
-# macOs
-.DS_Store
-
-# Generated files
-bin/
-gen/
-*.class
-*.dex
-
-# Gradle files
-.gradle
-.gradle/
-build/
-
-# Local configuration file
-local.properties*.iml
-.kotlin
-.gradle
-**/build/
-xcuserdata
-!src/**/build/
-local.properties
-.idea
-.DS_Store
-captures
-.externalNativeBuild
-.cxx
-*.xcodeproj/*
-!*.xcodeproj/project.pbxproj
-!*.xcodeproj/xcshareddata/
-!*.xcodeproj/project.xcworkspace/
-!*.xcworkspace/contents.xcworkspacedata
-**/xcshareddata/WorkspaceSettings.xcsettings
-node_modules/
+# Swift Package Manager
+.build/
+Packages/
