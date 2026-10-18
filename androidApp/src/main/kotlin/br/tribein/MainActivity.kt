@@ -10,6 +10,7 @@ import br.tribein.initKoin
 import org.koin.android.ext.koin.androidContext
 
 class MainActivity : ComponentActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         enableEdgeToEdge()
         super.onCreate(savedInstanceState)

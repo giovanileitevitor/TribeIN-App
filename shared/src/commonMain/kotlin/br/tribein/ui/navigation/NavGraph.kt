@@ -5,12 +5,13 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import br.tribein.ui.screens.splash.SplashScreenRadar
+import br.tribein.ui.screens.splash.SplashScreenZigbee
 
 @Composable
 fun NavGraph(navController: NavHostController) {
     NavHost(navController = navController, startDestination = "splash") {
         composable("splash") {
-            SplashScreenRadar(onTimeout = {
+            SplashScreenZigbee(onTimeout = {
 //                navController.navigate("login") {
 //                    popUpTo("splash") { inclusive = true }
 //                }

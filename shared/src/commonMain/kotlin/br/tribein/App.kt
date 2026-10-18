@@ -1,10 +1,13 @@
 package br.tribein
 
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.LocalTextStyle
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.navigation.compose.rememberNavController
 import br.tribein.di.appModule
 import br.tribein.ui.navigation.NavGraph
+import br.tribein.ui.theme.rememberRobotoFontFamily
 import coil3.ImageLoader
 import coil3.compose.setSingletonImageLoaderFactory
 import coil3.network.ktor3.KtorNetworkFetcherFactory
@@ -28,9 +31,15 @@ fun App() {
     }
 
     MaterialTheme {
-        KoinContext {
-            val navController = rememberNavController()
-            NavGraph(navController = navController)
+        CompositionLocalProvider(
+            LocalTextStyle provides MaterialTheme.typography.bodyLarge.copy(
+                fontFamily = rememberRobotoFontFamily()
+            )
+        ) {
+            KoinContext {
+                val navController = rememberNavController()
+                NavGraph(navController = navController)
+            }
         }
     }
 }
