@@ -28,6 +28,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Brush.Companion.verticalGradient
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -40,9 +41,7 @@ import br.tribein.ui.theme.GreenLightSaber
 import br.tribein.ui.theme.ZigbeeDeepGreen
 import br.tribein.ui.theme.ZigbeeGreen
 import br.tribein.ui.theme.ZigbeeText
-import br.tribein.ui.theme.gradient_end
-import br.tribein.ui.theme.gradient_init
-import br.tribein.ui.theme.gradient_mid
+import br.tribein.ui.theme.gradient_colors
 import br.tribein.ui.theme.rememberRobotoFontFamily
 import kotlinx.coroutines.delay
 import org.jetbrains.compose.ui.tooling.preview.Preview
@@ -59,15 +58,7 @@ fun SplashScreenZigbee(onTimeout: () -> Unit) {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(
-                androidx.compose.ui.graphics.Brush.verticalGradient(
-                    colors = listOf(
-                        gradient_init,
-                        gradient_mid,
-                        gradient_end
-                    )
-                )
-            )
+            .background(brush = verticalGradient(colors = gradient_colors))
             .padding(horizontal = 10.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {

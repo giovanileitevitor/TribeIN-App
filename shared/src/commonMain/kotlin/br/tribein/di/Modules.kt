@@ -23,6 +23,7 @@ package br.tribein.di
 //import br.stockin.ui.screens.wallet.home.WalletViewModel
 //import br.stockin.utils.FileSharer
 //import br.stockin.utils.provideFileSharer
+import br.tribein.ui.screens.login.LoginViewModel
 import com.russhwolf.settings.Settings
 import io.ktor.client.HttpClient
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
@@ -63,7 +64,7 @@ val appModule = module {
 //    single<BaseApi> { BaseApiImpl(get(), get()) }
 //
 //    // Settings
-//    single<Settings> { Settings() }
+    single<Settings> { Settings() }
 //
 //    // File Sharing
 //    single<FileSharer> { provideFileSharer() }
@@ -77,7 +78,7 @@ val appModule = module {
 //    viewModel { HomeViewModel(get() ) }
 //    viewModel { ViewDividendsViewModel(get() ) }
 //    viewModel { AccumulatedViewModel(get()) }
-//    viewModel { LoginViewModel(get(), get()) }
+    viewModel { LoginViewModel(get()) }
 //    viewModel { (ticker: String) -> StockDetailsViewModel(get(), ticker) }
 //    viewModel { WalletViewModel(get()) }
 //    viewModel { AddItemViewModel(get(), get()) }

@@ -41,3 +41,5 @@ val GreenLightSaber = Color(0xFF9EDBC9)
 val gradient_init = Color(0xFFEAF6F3)
 val gradient_mid = Color(0xFFDDF5EF)
 val gradient_end = Color(0xFFDDF4EF)
+
+val gradient_colors = listOf(gradient_init, gradient_mid, gradient_end)

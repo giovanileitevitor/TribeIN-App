@@ -59,8 +59,8 @@ object AppStrings {
     const val BackDescription = "Voltar"
 
     // Login Screen Strings
-    const val LoginSubtitle = "STOCK IN"
-    const val TXT_LOGIN_DESCRIPTION = "Seu app de controle financeiro \n(Gastos e Proventos)"
+    const val TXT_LOGIN_TITLE = "Tribe IN"
+    const val TXT_LOGIN_DESCRIPTION = "O mundo é feito de conexões..."
     const val EmailLabel = "Informe seu EMAIL"
     const val EmailPlaceholder = "seu@email.com"
     const val PasswordLabel = "Informe sua SENHA"

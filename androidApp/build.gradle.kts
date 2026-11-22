@@ -38,12 +38,20 @@ android {
         }
     }
     buildTypes {
-        release {
+        getByName("release") {
+//            if (keystoreProps.containsKey("storeFile")) {
+//                signingConfig = signingConfigs.getByName("release")
+//            }
             isMinifyEnabled = false
+            multiDexEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+        }
+        getByName("debug") {
+            isMinifyEnabled = false
+            isDebuggable = true
         }
     }
     compileOptions {

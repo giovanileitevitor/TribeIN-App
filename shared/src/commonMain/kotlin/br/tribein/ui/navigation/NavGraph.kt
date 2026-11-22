@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import br.tribein.ui.screens.login.LoginScreen
 import br.tribein.ui.screens.splash.SplashScreenRadar
 import br.tribein.ui.screens.splash.SplashScreenZigbee
 
@@ -12,26 +13,26 @@ fun NavGraph(navController: NavHostController) {
     NavHost(navController = navController, startDestination = "splash") {
         composable("splash") {
             SplashScreenZigbee(onTimeout = {
-//                navController.navigate("login") {
-//                    popUpTo("splash") { inclusive = true }
-//                }
+                navController.navigate("login") {
+                    popUpTo("splash") { inclusive = true }
+                }
             })
         }
-//        composable("login") {
-//            LoginScreen(
-//                onLoginSuccess = {
+        composable("login") {
+            LoginScreen(
+                onLoginSuccess = {
 //                    navController.navigate("home") {
 //                        popUpTo("login") { inclusive = true }
 //                    }
-//                },
-//                onCreateAccountClick = {
-//                   navController.navigate("new_account")
-//                },
-//                onForgotPassClick = {
-//                    navController.navigate("forgot_password")
-//                }
-//            )
-//        }
+                },
+                onCreateAccountClick = {
+                   //navController.navigate("new_account")
+                },
+                onForgotPassClick = {
+                    //navController.navigate("forgot_password")
+                }
+            )
+        }
 //        composable("home") {
 //            HomeScreen(
 //                onAboutClick = {
